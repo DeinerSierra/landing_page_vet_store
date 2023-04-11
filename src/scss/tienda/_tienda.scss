@@ -1,0 +1,18 @@
+.producto{
+    position: relative;
+    background: linear-gradient(to bottom, #21C45F);
+    -webkit-box-shadow: 10px 22px 9px -5px rgba(33,196,95,0.56);
+    -moz-box-shadow: 10px 22px 9px -5px rgba(33,196,95,0.56);
+    box-shadow: 10px 22px 9px -5px rgba(33,196,95,0.56);
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    transition: all 0.7s ease-in-out;
+    width: 100%;
+    &:hover {
+    transform: scale(1.05);
+    }
+    
+}

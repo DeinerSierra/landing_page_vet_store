@@ -1,0 +1,89 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.header {
+    background-image: linear-gradient(to right, rgb(0 0 0 / .7), rgb(0 0 0 / .7)), url(/public/build/img/dogshero.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    position: relative;
+    @include m.tablet { 
+        padding: 3rem 0 20rem 0;
+    }
+    &__barra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include m.tablet { 
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    
+    &__logo {
+        width: 5rem;
+    }
+    &__link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: #F98418;
+            font-size: 2.5rem;
+        }
+        @include m.tablet { 
+            justify-content: space-between;
+            flex-direction: row;
+            
+        }
+
+    }
+    &__contenido {
+
+        @include m.tablet { 
+            margin-top: 10rem;
+            max-width: 50rem;
+        }
+    }
+    &__heading {
+        color: v.$blanco;
+        text-align: center;
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+    &__texto {
+        color: v.$blanco;
+        display: none;
+        @include m.tablet { 
+            display: block;
+        }
+    }
+    
+}
+.navegacion {
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+    position: relative;
+    z-index: 1;
+    @include m.tablet {
+        .navegacion {
+            margin-top: 0;
+        }
+    }
+    &__enlace{
+        color: #F98418;
+        padding: 2rem 1rem;
+        display: block;
+        border-radius: .5rem;
+        font-weight: 600;
+    }
+}
+.navegacion__enlace:hover {
+    color: white;
+}

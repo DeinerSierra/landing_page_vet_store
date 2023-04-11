@@ -1,0 +1,186 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.categorias__heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #F98418;
+    
+}
+.categorias__desc{
+    display: block;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.categorias__listado {
+    @include m.tablet {
+        .categorias__listado {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            
+        }
+        
+        
+    }
+    .categoria{
+        img {
+            height: 30rem;
+            width: 30rem;
+            object-fit: cover;
+        }
+        @include m.desktop { 
+            &:nth-child(1) {
+                grid-column: 1 / 3;
+                img {
+                    width: 100%;
+                    height: 30rem;
+                    object-position: center;
+                }
+            }
+            &:nth-child(2) {
+                grid-column: 3 / 4;
+                img {
+                    width: 30rem;
+                }
+            }
+            &:nth-child(3) {
+                grid-column: 4 / 5;
+                img {
+                    width: 100%;
+                    object-position: center;
+                }
+            }
+            &:nth-child(4) {
+                grid-column: 1 / 2;
+                img {
+                    width: 100%;
+                    object-position: center;
+                    object-fit: cover;
+                }
+            }
+            &:nth-child(5) {
+                grid-column: 2 / 4;
+                img {
+                    width: 100%;
+                    object-position: center;
+                }
+            }
+            &:nth-child(6) {
+                grid-column: 4 / 5;
+                img {
+                    width: 100%;
+                    object-position: center;
+                }
+            }
+            &:nth-child(7) {
+                grid-column: 1 / 3;
+                img {
+                    width: 100%;
+                    object-position: center;
+                }
+            }
+            &:nth-child(8) {
+                grid-column: 3 / 5;
+                img {
+                    width: 100%;
+                    object-position: center;
+                    object-fit: cover;
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+.categorias{
+    padding: 5rem 0;
+    @include m.tablet {
+        .categorias__listado {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+    }
+    
+}
+.categoria {
+    margin-bottom: 2rem;
+    -webkit-box-shadow: 2px 6px 16px 0px rgb(249,132,24);
+    -moz-box-shadow: 2px 6px 16px 0px rgb(249,132,24);
+    box-shadow: 2px 6px 16px 0px rgb(249,132,24);
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+    img{
+        border-radius: none;
+        width: 100%;
+        height: 40rem;
+    }
+    a {
+        text-align: center;
+        color: #F98418;
+        display: block;
+        padding: 2rem;
+        font-size: 2rem;
+    }
+    a:hover {
+        background-color: #037bc0;
+        color: #FFFFFF;
+        border-radius: none;
+    }
+}
+.colegio{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    
+}
+.colegio__heading{
+    text-align: center;
+    color: #F98418;
+}
+.blobz {
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50% 50% 0;
+    background-color: #FF7F50;
+    background-image: url('/public/build/img/colegio.jpg');
+    background-size: cover;
+    background-position: center;
+    @include m.tablet { 
+        border: none;
+        transition-property: transform;
+        transition-duration: 300ms;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    margin: 5rem 0 10rem 0;
+    &:nth-child(odd){
+        border-radius: 10% 80% 60% 80%;
+        
+    }
+
+}
+
+.blobz.blobz__2{
+    background-image: url('/public/build/img/dog-school.jpg');
+}
+.blobz.blobz__3{
+    background-image: url('/public/build/img/dogschol2.jpg');
+}
+.blobz.blobz__4{
+    background-image: url('/public/build/img/dogschol3.jpg');
+}
+.blobz.blobz__5{
+    background-image: url('/public/build/img/dogschol4.jpg');
+}
+.blobz.blobz__6{
+    background-image: url('/public/build/img/dogschol1.jpg');
+}
+
