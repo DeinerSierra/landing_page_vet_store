@@ -1,5 +1,9 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
+.productos{
+    margin: 0 auto;
+    
+}
 .tienda__listado{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -31,8 +35,8 @@
     transition-property: all; 
     transition-duration: 0.7s; 
     transition-timing-function: ease-in-out; 
-    width: 30rem;
-    height: 30rem;
+    width: 100%;
+    height: 25rem;
     justify-items: start;
     margin: 0 auto;
     &:hover {
@@ -99,13 +103,13 @@
 .producto__imagen{
     position: absolute; 
     
-    bottom: 8rem; 
+    bottom: 5rem; 
     right: 3rem; 
     display: flex;
     align-items: center; 
     img{
-        width: 14rem;
-        height: 14rem;
+        width: 12rem;
+        height: 12rem;
         transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out;
         transform: rotate(-35deg); 
     }
