@@ -1,18 +1,117 @@
-.producto{
-    position: relative;
-    background: linear-gradient(to bottom, #21C45F);
-    -webkit-box-shadow: 10px 22px 9px -5px rgba(33,196,95,0.56);
-    -moz-box-shadow: 10px 22px 9px -5px rgba(33,196,95,0.56);
-    box-shadow: 10px 22px 9px -5px rgba(33,196,95,0.56);
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+.tienda__listado{
     display: grid;
-    align-items: center;
-    justify-items: start;
-    border-radius: 0.75rem;
-    padding: 1rem 1.25rem;
-    transition: all 0.7s ease-in-out;
-    width: 100%;
-    &:hover {
-    transform: scale(1.05);
+    grid-template-columns: repeat(1, 1fr);
+    gap: .7rem;
+    padding: 0;
+    margin: o auto;
+    @include m.tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    @include m.desktop {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
     }
     
+
+    
+}
+.tienda__heading{
+    color: #F98418;
+}
+.producto{
+    display: grid; 
+    align-items: start;
+    position: relative; 
+    background: linear-gradient(to bottom, #22C55F, #10B980); 
+    border-radius: 1rem;
+    padding: 1rem;
+    transition-property: all; 
+    transition-duration: 0.7s; 
+    transition-timing-function: ease-in-out; 
+    width: 30rem;
+    height: 30rem;
+    justify-items: start;
+    margin: 0 auto;
+    &:hover {
+        transform: scale(1.05); 
+    }
+    &:nth-child(even){
+        background: linear-gradient(to bottom, #0F1729, #10B980); 
+    }
+    
+}
+.producto__heading{
+    color: white; 
+    font-size: 2rem; 
+    font-weight: 500; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+.producto__desc{
+    color: white; 
+    font-size: 1rem; 
+    font-weight: normal; 
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25)); 
+}
+.producto__contenedor-precio{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 5rem;
+    margin: 0;
+    padding: 2rem 0;
+}
+.producto__precio{
+    display: flex;
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: .5rem 1rem;
+    border-radius: 0.25rem; 
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2); 
+    h2{
+        color: #F98418; 
+        font-size: 2rem; 
+        font-weight: 500; 
+    }
+}
+.botones{
+    display: flex; 
+    align-items: center; 
+    gap: 0.75rem; 
+    .boton{
+        background-color: rgba(255, 255, 255, 0.9); 
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); 
+        border: none;
+        padding: .5rem; 
+        border-radius: .5rem;
+        color: #F98418; 
+        font-weight: bold; 
+        text-align: center; 
+        text-decoration: none; 
+        transition: background-color 0.2s ease-in-out; 
+    }
+
+}
+.producto__imagen{
+    position: absolute; 
+    
+    bottom: 8rem; 
+    right: 3rem; 
+    display: flex;
+    align-items: center; 
+    img{
+        width: 14rem;
+        height: 14rem;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out;
+        transform: rotate(-35deg); 
+    }
+    img:hover {
+        transform: rotate(-12deg); 
+        height: auto;
+        width: 20rem; 
+    }
 }
